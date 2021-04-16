@@ -1,4 +1,5 @@
 from flask import Flask
-app = Flask(__name__)
+from inventory.device.views import device
 
-import inventory.device.views
+app = Flask(__name__)
+app.register_blueprint(device)
