@@ -6,4 +6,5 @@ device = Blueprint('device', __name__)
 @device.route('/')
 @device.route('/device')
 def show_all_devices():
-    return DEVICES
+    return ("<img src='/static/images/inventory.png'></br>"
+        f"{DEVICES}")
